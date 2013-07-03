@@ -61,9 +61,14 @@ Gomez-Herrero][ggh].
     where `<EEGLAB_ROOT>` should be replaced by the path to EEGLAB's root
     directory.
 
-
-
 [eeglab]: http://sccn.ucsd.edu/eeglab/
+
+4. Optionally, you may want to install few additional [BSS][bss] algorithms that
+   will be automatically detected by the AAR plug-in as long as they are in
+   MATLAB's search path:
+
+   * Cardoso's JADE: http://www.tsi.enst.fr/~cardoso/Algo/Jade/jadeR.m
+   * Hyvarinen's FastICA: http://www.cis.hut.fi/projects/ica/fastica/
 
 
 ## Additional resources
@@ -76,7 +81,7 @@ scientific publication:
 * [Gomez-Herrero, G.][ggh] et al., _Automatic Removal of Ocular Artifacts in the
   EEG without an EOG Reference Channel_, In Proceedings of the 7th Nordic Signal
   Processing Symposium, 2006. DOI: [10.1109/NORSIG.2006.275210][eog-doi]. The
-  article is freely available from [TUT's archives][aar-tut], and from my
+  article is freely available from [TUT's archives][aar-tut], and from
   [my homepage][aar-home].
 
 [aar-home]: http://germangh.com/papers/norsig06.pdf
@@ -98,6 +103,28 @@ You can also  get some of the [datasets][datasets] that were used to evaluate
 the performance of some of the methods included in the AAR toolbox.
 
 [datasets]: http://germangh.com/datasets/epilepsy
+
+
+## Known issues
+
+- The algorithm for EMG correction which is based on the criterion
+`emg_psd` requires MATLAB's Signal Processing Toolbox v.6.2 or newer.
+We do not expect to solve this issue in the near future.
+
+- There exist small differences between the correction results obtained
+under MATLAB v7.4 and Signal Processing Toolbox v6.6 and the results
+obtained under previous MATLAB releases. Nevertheless, the differences
+found so far are very small (negligible with respect to typical EEG
+noise levels). The probable cause are the changes that were introduced
+in MATLAB's SPT toolbox v6.6.
+
+- There exist very small differences between the correction results
+obtain under MATLAB v7.4 for Windows and MATLAB v7.4 for Linux. Again,
+the differences are well below typical EEG noise levels. The causes of
+these differences are unknown and I have no plans of investigating this further.
+
+
+## License
 
 
 
