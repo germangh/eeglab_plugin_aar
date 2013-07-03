@@ -1,4 +1,4 @@
-eeglab_plugin_aar
+AAR plug-in for EEGLAB
 =================
 
 This repository stores the code of the AAR plug-in for [EEGLAB][eeglab] that was
