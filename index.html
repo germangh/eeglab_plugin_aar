@@ -32,9 +32,8 @@
 <a name="aar-plug-in-for-eeglab" class="anchor" href="#aar-plug-in-for-eeglab"><span class="octicon octicon-link"></span></a>AAR plug-in for EEGLAB</h1>
 
 <p>This repository stores the code of the AAR plug-in for <a href="http://sccn.ucsd.edu/eeglab/">EEGLAB</a> that was
-released on 31-10-2008. I am not developing this code anymore apart from fixing major bugs.</p>
-
-<p>For suggestions, comments and bug reports, please contact <a href="http://germangh.com">German Gomez-Herrero</a>.</p>
+released on 31-10-2008. I am not developing this code anymore apart from fixing major bugs.
+For suggestions, comments and bug reports, please contact <a href="http://germangh.com">German Gomez-Herrero</a>.</p>
 
 <h2>
 <a name="overview" class="anchor" href="#overview"><span class="octicon octicon-link"></span></a>Overview</h2>
@@ -71,17 +70,13 @@ git clone git://github.com/germangh/eeglab_plugin_aar aar1.3
 </pre></div>
 
 <p>where <code>&lt;EEGLAB_ROOT&gt;</code> should be replaced by the path to EEGLAB's root
-directory.</p>
+directory. Instead of using <code>git</code> to clone the repository you can also use the
+button on the top left corner to download the code as a .zip file.</p>
 </li>
-<li><p>Optionally, you may want to install few additional <a href="http://en.wikipedia.org/wiki/Blind_signal_separation">BSS</a> algorithms that
-will be automatically detected by the AAR plug-in as long as they are in
-MATLAB's search path:</p></li>
-</ol><ul>
-<li>Cardoso's JADE: <a href="http://www.tsi.enst.fr/%7Ecardoso/Algo/Jade/jadeR.m">http://www.tsi.enst.fr/~cardoso/Algo/Jade/jadeR.m</a>
-</li>
-<li>Hyvarinen's FastICA: <a href="http://www.cis.hut.fi/projects/ica/fastica/">http://www.cis.hut.fi/projects/ica/fastica/</a>
-</li>
-</ul><h2>
+<li><p>Optionally, you may want to install additional <a href="http://en.wikipedia.org/wiki/Blind_signal_separation">BSS</a> algorithms. Both
+<a href="http://www.tsi.enst.fr/%7Ecardoso/Algo/Jade/jadeR.m">JADE</a> and <a href="http://www.cis.hut.fi/projects/ica/fastica/">Fastica</a> will be automatically detected by the 
+AAR plug-in as long as they are in MATLAB's search path:</p></li>
+</ol><h2>
 <a name="additional-resources" class="anchor" href="#additional-resources"><span class="octicon octicon-link"></span></a>Additional resources</h2>
 
 <p>The <a href="http://en.wikipedia.org/wiki/Blind_signal_separation">BSS</a>-based EOG correction procedure is based on the following
