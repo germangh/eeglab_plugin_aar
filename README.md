@@ -82,9 +82,6 @@ scientific publication:
 [eog-doi]: http://dx.doi.org/10.1109/NORSIG.2006.275210
 [aar-tut]: http://sp.cs.tut.fi/publications/archive/Gomez-Herrero2006-Automatic.pdf
 
-Please __cite the publication above__ if you use the AAR plug-in in any of your
-scientific publications.
-
 The automatic EMG correction method is based on the following reference:
 
 * De Clercq, W. et al., _Canonical Correlation Analysis Applied to Remove
