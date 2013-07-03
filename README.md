@@ -44,6 +44,23 @@ Gomez-Herrero][ggh].
 
 1. Install [EEGLAB][eeglab] for MATLAB, if you haven't done so already.
 
+2. Find out EEGLAB's root directory. If you installed EEGLAB properly (which
+   includes adding EEGLAB to your MATLAB search path), then you should be able
+   to get EEGLAB's root dir using the following command in MATLAB:
+
+````matlab
+    fileparts(which('eeglab'))
+````
+
+3. Open a terminal and type:
+
+````bash
+    cd <EEGLAB_ROOT>/plugins
+    git clone git://github.com/germangh/eeglab_plugin_aar aar1.3
+````
+
+
+
 [eeglab]: http://sccn.ucsd.edu/eeglab/
 
 
@@ -52,13 +69,15 @@ Gomez-Herrero][ggh].
 The [BSS][bss]-based EOG correction procedure is based on the following
 scientific publication:
 
-* [Gomez-Herrero, G.] et al., _Automatic Removal of Ocular Artifacts in the EEG
-  without an EOG Reference Channel_, In Proceedings of the 7th Nordic Signal
-  Processing Symposium, 2006. DOI: [10.1109/NORSIG.2006.275210][eog-doi]. The
-  article is freely available [here][aar-tut]. A slightly extended version of
-  the manuscript is available at [my homepage][aar-extended].
+[bss]: http://en.wikipedia.org/wiki/Blind_signal_separation
 
-[aar-extended]: http://germangh.com/papers/norsig06.pdf
+* [Gomez-Herrero, G.][ggh] et al., _Automatic Removal of Ocular Artifacts in the
+  EEG without an EOG Reference Channel_, In Proceedings of the 7th Nordic Signal
+  Processing Symposium, 2006. DOI: [10.1109/NORSIG.2006.275210][eog-doi]. The
+  article is freely available from [TUT's archives][aar-tut], and from my
+  [my homepage][aar-home].
+
+[aar-home]: http://germangh.com/papers/norsig06.pdf
 [eog-doi]: http://dx.doi.org/10.1109/NORSIG.2006.275210
 [aar-tut]: http://sp.cs.tut.fi/publications/archive/Gomez-Herrero2006-Automatic.pdf
 
