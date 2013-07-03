@@ -93,8 +93,8 @@ scientific publications.
 
 The automatic EMG correction method is based on the following reference:
 
-* De Clercq, W. et al., __Canonical Correlation Analysis Applied to Remove
-  Muscle Artifacts from the Electroencephalogram__, IEEE Trans. Biomed. Eng 53
+* De Clercq, W. et al., _Canonical Correlation Analysis Applied to Remove
+  Muscle Artifacts from the Electroencephalogram_, IEEE Trans. Biomed. Eng 53
   (12), pp. 2583-2587. DOI: [10.1109/TBME.2006.879459][doi-emg].
 
 [doi-emg]: http://dx.doi.org/10.1109/TBME.2006.879459
