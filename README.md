@@ -18,9 +18,9 @@ to do everything you can do with the AAR plug-in and much much more.
 
 The AAR plug-in is a collection of [MATLAB][matlab] scripts that implement
 several state-of-art (in 2008 anyways...) methods for automatic correction of
-ocular and muscular artifacts in the [EEG][eeg]. The capabilities of the toolbox are
-briefly described in a fairly outdated tutorial document in [.pdf][tut-pdf], or
-in [html][tut-html] format.
+ocular and muscular artifacts in the [EEG][eeg]. The capabilities of the toolbox
+are briefly described in a fairly outdated tutorial document, which you can get
+in [.pdf][tut-pdf], or in [html][tut-html] format.
 
 [matlab]: http://www.mathworks.nl/products/matlab/
 [eeg]: http://en.wikipedia.org/wiki/Electroencephalography
@@ -29,7 +29,7 @@ in [html][tut-html] format.
 
 The toolbox is implemented as an [EEGLAB][eeglab] plug-in, but can also be used
 without EEGLAB if you don't need or want to use EEGLAB's GUI. The current
-version implments several fully automatic methods to correct ocular ([EOG][eog])
+version implements several fully automatic methods to correct ocular ([EOG][eog])
 artifacts, and one automatic method to correct muscle ([EMG][emg]) artifacts.
 
 For suggestions, comments and bug reports, please contact [German Gomez-Herrero][ggh].
