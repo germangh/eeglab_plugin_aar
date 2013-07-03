@@ -32,21 +32,22 @@
 <a name="aar-plug-in-for-eeglab" class="anchor" href="#aar-plug-in-for-eeglab"><span class="octicon octicon-link"></span></a>AAR plug-in for EEGLAB</h1>
 
 <p>This repository stores the code of the AAR plug-in for <a href="http://sccn.ucsd.edu/eeglab/">EEGLAB</a> that was
-released on 31-10-2008. I am not developing this code anymore apart from fixing major bugs.
-For suggestions, comments and bug reports, please contact <a href="http://germangh.com">German Gomez-Herrero</a>.</p>
+released on 31-10-2008. I am not developing this code anymore but if you report
+any major bug I will try to fix it whenever I have time. For suggestions,
+comments and bug reports, please contact <a href="http://germangh.com">German Gomez-Herrero</a>.</p>
 
 <h2>
 <a name="overview" class="anchor" href="#overview"><span class="octicon octicon-link"></span></a>Overview</h2>
 
 <p>The AAR plug-in is a collection of <a href="http://www.mathworks.nl/products/matlab/">MATLAB</a> scripts that implement
 several state-of-art (in 2008 anyways...) methods for automatic correction of
-ocular and muscular artifacts in the [EEG]. The capabilities of the toolbox are
-briefly described in a fairly outdated <a href="http://kasku.org/pubs/aardoc07.pdf">tutorial document</a> in .pdf
-format.</p>
+ocular and muscular artifacts in the <a href="http://en.wikipedia.org/wiki/Electroencephalography">EEG</a>. The capabilities of the toolbox
+are briefly described in a fairly outdated tutorial document, which you can get
+in <a href="http://germangh.com/pubs/aardoc07.pdf">.pdf</a>, or in <a href="http://germangh.com/aar/aardoc/">html</a> format.</p>
 
 <p>The toolbox is implemented as an <a href="http://sccn.ucsd.edu/eeglab/">EEGLAB</a> plug-in, but can also be used
 without EEGLAB if you don't need or want to use EEGLAB's GUI. The current
-version implments several fully automatic methods to correct ocular (<a href="http://emedicine.medscape.com/article/1140247-overview#aw2aab6b3">EOG</a>)
+version implements several fully automatic methods to correct ocular (<a href="http://emedicine.medscape.com/article/1140247-overview#aw2aab6b3">EOG</a>)
 artifacts, and one automatic method to correct muscle (<a href="http://emedicine.medscape.com/article/1140247-overview#aw2aab6b3">EMG</a>) artifacts.</p>
 
 <h2>
@@ -70,12 +71,11 @@ git clone git://github.com/germangh/eeglab_plugin_aar aar1.3
 </pre></div>
 
 <p>where <code>&lt;EEGLAB_ROOT&gt;</code> should be replaced by the path to EEGLAB's root
-directory. Instead of using <code>git</code> to clone the repository you can also use the
-button on the top left corner to download the code as a .zip file.</p>
+directory.</p>
 </li>
 <li><p>Optionally, you may want to install additional <a href="http://en.wikipedia.org/wiki/Blind_signal_separation">BSS</a> algorithms. Both
-<a href="http://www.tsi.enst.fr/%7Ecardoso/Algo/Jade/jadeR.m">JADE</a> and <a href="http://www.cis.hut.fi/projects/ica/fastica/">Fastica</a> will be automatically detected by the 
-AAR plug-in as long as they are in MATLAB's search path:</p></li>
+<a href="http://www.tsi.enst.fr/%7Ecardoso/Algo/Jade/jadeR.m">JADE</a> and <a href="http://www.cis.hut.fi/projects/ica/fastica/">FastICA</a> will be automatically detected as
+as they are in the MATLAB's search path:</p></li>
 </ol><h2>
 <a name="additional-resources" class="anchor" href="#additional-resources"><span class="octicon octicon-link"></span></a>Additional resources</h2>
 
@@ -89,7 +89,10 @@ EEG without an EOG Reference Channel</em>, In Proceedings of the 7th Nordic Sign
 Processing Symposium, 2006. <a href="http://dx.doi.org/10.1109/NORSIG.2006.275210">10.1109/NORSIG.2006.275210</a>. The
 article is freely available from <a href="http://sp.cs.tut.fi/publications/archive/Gomez-Herrero2006-Automatic.pdf">TUT's archives</a>, and from
 <a href="http://germangh.com/papers/norsig06.pdf">my homepage</a>.</li>
-</ul><p>The automatic EMG correction method is based on the following reference:</p>
+</ul><p>Please <strong>cite the publication above</strong> if you use the AAR plug-in in any of your
+scientific publications.</p>
+
+<p>The automatic EMG correction method is based on the following reference:</p>
 
 <ul>
 <li>De Clercq, W. et al., <em>Canonical Correlation Analysis Applied to Remove
@@ -99,10 +102,28 @@ Muscle Artifacts from the Electroencephalogram</em>, IEEE Trans. Biomed. Eng 53
 the performance of some of the methods included in the AAR toolbox.</p>
 
 <h2>
+<a name="known-issues" class="anchor" href="#known-issues"><span class="octicon octicon-link"></span></a>Known issues</h2>
+
+<ul>
+<li><p>The algorithm for EMG correction which is based on the criterion
+<code>emg_psd</code> requires MATLAB's Signal Processing Toolbox v.6.2 or newer.
+We do not expect to solve this issue in the near future.</p></li>
+<li><p>There exist small differences between the correction results obtained
+under MATLAB v7.4 and Signal Processing Toolbox v6.6 and the results
+obtained under previous MATLAB releases. Nevertheless, the differences
+found so far are very small (negligible with respect to typical EEG
+noise levels). The probable cause are the changes that were introduced
+in MATLAB's SPT toolbox v6.6.</p></li>
+<li><p>There exist very small differences between the correction results
+obtain under MATLAB v7.4 for Windows and MATLAB v7.4 for Linux. Again,
+the differences are well below typical EEG noise levels. The causes of
+these differences are unknown and I have no plans of investigating this further.</p></li>
+</ul><h2>
 <a name="license" class="anchor" href="#license"><span class="octicon octicon-link"></span></a>License</h2>
 
-<p>This code is released under the
-<a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">Creative Commons Attribution-NonCommercial-ShareAlike licence</a>. If you use this software in any of your publications you must cite the following article:</p>
+<p>The AAR plug-in is released under the
+<a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">Creative Commons Attribution-NonCommercial-ShareAlike licence</a>. Note that third-party dependencies shipped together with the AAR plug-in may have their
+own licences. If you use this software in any of your publications you must cite the following article:</p>
 
 <ul>
 <li>
