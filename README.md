@@ -133,8 +133,12 @@ See [version history](./version_history.md).
 
 See [credits](./credits.md).
 
+
 ## License
 
+Any code that is not part of any of the bundled third-party dependencies
+(see [the list][credits]), is released under the
+[Creative Commons Attribution-NonCommercial-ShareAlike licence](http://creativecommons.org/licenses/by-nc-sa/3.0/).
 
 
 
