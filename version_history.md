@@ -4,8 +4,10 @@ Version history
 ## Version 1.3
 
 ### Release 05-05-2009
-	- A minor bug in function fd.m has been corrected.
-Release 06-04-2009, version 1.3
+  - A minor bug in function fd.m has been corrected.
+
+
+### Release 06-04-2009, version 1.3
   - Added the possibility of adding labels to chunks of EEG data via GUI.
     This option works only for continuous datasets (not for epoched datasets)
     In future releases epoched datasets will also be supported. This feature
@@ -13,10 +15,10 @@ Release 06-04-2009, version 1.3
   - Few minor bugs corrected.
 
 ### Release 31-10-2008
-	- IMPORTANT: The order of the input parameters of functions pop_autobssemg
-	  pop_autobsseog has changed.
-	- Corrected few bugs related with running pop_autobssemg and pop_autobsseog
-	  script mode (i.e. from the command line).
+  - IMPORTANT: The order of the input parameters of functions pop_autobssemg
+    pop_autobsseog has changed.
+  - Corrected few bugs related with running pop_autobssemg and pop_autobsseog
+    script mode (i.e. from the command line).
 
 ### Release 09-12-2007, minor changes
   - SOBI is again the default algorithm for BSS-based EOG correction
@@ -64,7 +66,7 @@ Release 06-04-2009, version 1.3
   - pop_autobssemg now automatically passes the sampling rate to emg_psd
   - first draft of the toolbox documentation
 
-## Release 31-10-2007, minor update
+### Release 31-10-2007, minor update
   - Minor bugs corrected
   - EFICA v1.9 was updated with EFICA v2.0 (implemented by Z. Koldovsk˝)
 
