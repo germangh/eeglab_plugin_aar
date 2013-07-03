@@ -132,10 +132,12 @@ See [credits][credits].
 
 ## License
 
-Any code that is not part of any of the bundled third-party dependencies
-(see [the list][credits]), is released under the
-[Creative Commons Attribution-NonCommercial-ShareAlike licence](http://creativecommons.org/licenses/by-nc-sa/3.0/). If you use this software in any of your
-publications you must cite the following article:
+The AAR plug-in is released under the
+[Creative Commons Attribution-NonCommercial-ShareAlike licence](http://creativecommons.org/licenses/by-nc-sa/3.0/).
+Note that third-party dependencies shipped together with the AAR plug-in may
+have their own licenses. If you use this software in any of your publications
+you must cite the following article:
+
 
 * [Gomez-Herrero, G.][ggh] et al., _Automatic Removal of Ocular Artifacts in the
   EEG without an EOG Reference Channel_, In Proceedings of the 7th Nordic Signal
