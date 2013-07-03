@@ -3,15 +3,11 @@ AAR plug-in for EEGLAB
 
 This repository stores the code of the AAR plug-in for [EEGLAB][eeglab] that was
 released on 31-10-2008. I am not developing this code anymore but if you report
-any major bug I will try to fix it whenever I have time. If you are able to,
-I would really appreciate if you fork the repo, fix the bug and make a pull
-request.
+any major bug I will try to fix it whenever I have time. For suggestions,
+comments and bug reports, please contact [German Gomez-Herrero][ggh].
 
-If you are interested in removing artifacts from EEG time-series, you might find
-interesting the [meegpipe][meegpipe] project. You can use [meegpipe][meegpipe]
-to do everything you can do with the AAR plug-in and much much more.
 
-[meegpipe]: http://germangh.com/meegpipe
+[ggh]: http://germangh.com
 
 
 ## Overview
@@ -32,13 +28,11 @@ without EEGLAB if you don't need or want to use EEGLAB's GUI. The current
 version implements several fully automatic methods to correct ocular ([EOG][eog])
 artifacts, and one automatic method to correct muscle ([EMG][emg]) artifacts.
 
-For suggestions, comments and bug reports, please contact [German Gomez-Herrero][ggh].
 
 [eog]: http://emedicine.medscape.com/article/1140247-overview#aw2aab6b3
 
 [emg]: http://emedicine.medscape.com/article/1140247-overview#aw2aab6b3
 
-[ggh]: http://germangh.com
 
 ## Installation instructions
 
@@ -63,12 +57,12 @@ For suggestions, comments and bug reports, please contact [German Gomez-Herrero]
 
 [eeglab]: http://sccn.ucsd.edu/eeglab/
 
-4. Optionally, you may want to install few additional [BSS][bss] algorithms that
-   will be automatically detected by the AAR plug-in as long as they are in
-   MATLAB's search path:
+4. Optionally, you may want to install additional [BSS][bss] algorithms. Both
+   [JADE][jade] and [FastICA][fastica] will be automatically detected as
+   as they are in the MATLAB's search path:
 
-   * Cardoso's JADE: http://www.tsi.enst.fr/~cardoso/Algo/Jade/jadeR.m
-   * Hyvarinen's FastICA: http://www.cis.hut.fi/projects/ica/fastica/
+[jade]: http://www.tsi.enst.fr/~cardoso/Algo/Jade/jadeR.m
+[fastica]: http://www.cis.hut.fi/projects/ica/fastica/
 
 
 ## Additional resources
