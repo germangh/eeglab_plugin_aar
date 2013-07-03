@@ -124,6 +124,15 @@ the differences are well below typical EEG noise levels. The causes of
 these differences are unknown and I have no plans of investigating this further.
 
 
+## Version history
+
+See [version history](./version_history.md).
+
+
+## Credit to third parties
+
+See [credits](./credits.md).
+
 ## License
 
 
