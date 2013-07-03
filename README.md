@@ -80,7 +80,7 @@ scientific publication:
 
 * [Gomez-Herrero, G.][ggh] et al., _Automatic Removal of Ocular Artifacts in the
   EEG without an EOG Reference Channel_, In Proceedings of the 7th Nordic Signal
-  Processing Symposium, 2006. DOI: [10.1109/NORSIG.2006.275210][eog-doi]. The
+  Processing Symposium, 2006. [10.1109/NORSIG.2006.275210][eog-doi]. The
   article is freely available from [TUT's archives][aar-tut], and from
   [my homepage][aar-home].
 
@@ -95,7 +95,7 @@ The automatic EMG correction method is based on the following reference:
 
 * De Clercq, W. et al., _Canonical Correlation Analysis Applied to Remove
   Muscle Artifacts from the Electroencephalogram_, IEEE Trans. Biomed. Eng 53
-  (12), pp. 2583-2587. DOI: [10.1109/TBME.2006.879459][doi-emg].
+  (12), pp. 2583-2587. [10.1109/TBME.2006.879459][doi-emg].
 
 [doi-emg]: http://dx.doi.org/10.1109/TBME.2006.879459
 
@@ -131,14 +131,22 @@ See [version history](./version_history.md).
 
 ## Credit to third parties
 
-See [credits](./credits.md).
+See [credits][credits].
+
+[credits]: ./credits.md
 
 
 ## License
 
 Any code that is not part of any of the bundled third-party dependencies
 (see [the list][credits]), is released under the
-[Creative Commons Attribution-NonCommercial-ShareAlike licence](http://creativecommons.org/licenses/by-nc-sa/3.0/).
+[Creative Commons Attribution-NonCommercial-ShareAlike licence](http://creativecommons.org/licenses/by-nc-sa/3.0/). If you use this software in any of your
+publications you must cite the following article:
 
+* [Gomez-Herrero, G.][ggh] et al., _Automatic Removal of Ocular Artifacts in the
+  EEG without an EOG Reference Channel_, In Proceedings of the 7th Nordic Signal
+  Processing Symposium, 2006. [10.1109/NORSIG.2006.275210][eog-doi]. The
+  article is freely available from [TUT's archives][aar-tut], and from
+  [my homepage][aar-home].
 
 
