@@ -48,16 +48,18 @@ Gomez-Herrero][ggh].
    includes adding EEGLAB to your MATLAB search path), then you should be able
    to get EEGLAB's root dir using the following command in MATLAB:
 
-````matlab
+    ````matlab
     fileparts(which('eeglab'))
-````
+    ````
 
 3. Open a terminal and type:
 
-````bash
+    ````bash
     cd <EEGLAB_ROOT>/plugins
     git clone git://github.com/germangh/eeglab_plugin_aar aar1.3
-````
+    ````
+    where `<EEGLAB_ROOT>` should be replaced by the path to EEGLAB's root
+    directory.
 
 
 
