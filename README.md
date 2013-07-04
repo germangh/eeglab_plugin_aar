@@ -48,9 +48,9 @@ artifacts, and one automatic method to correct muscle ([EMG][emg]) artifacts.
     unzip(url, [eeglabRoot filesep 'plugins'];
     eeglab redraw;
     ````
-    [git]: http://git-scm.com/
-    [masterzip]: https://github.com/germangh/eeglab_plugin_aar/archive/master.zip
-    [eeglab]: http://sccn.ucsd.edu/eeglab/
+[git]: http://git-scm.com/
+[masterzip]: https://github.com/germangh/eeglab_plugin_aar/archive/master.zip
+[eeglab]: http://sccn.ucsd.edu/eeglab/
 
 3. Optionally, you may want to install additional [BSS][bss] algorithms. Both
    [JADE][jade] and [FastICA][fastica] will be automatically detected by the AAR
