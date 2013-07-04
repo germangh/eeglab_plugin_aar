@@ -93,7 +93,7 @@ the performance of some of the methods included in the AAR toolbox.
 
 If I find major bugs or have important announcements, I will post them to
 [this Google group][group]. Please join the group if you are using the AAR
-plug-in. Only I can post to the forum and so you can be sure of receiving emails
+plug-in. Only I can post to the forum so you can be sure of receiving emails
 very rarely, if you ever receive any.
 
 [group]: https://groups.google.com/forum/#!forum/aartoolbox
