@@ -58,6 +58,7 @@ artifacts, and one automatic method to correct muscle ([EMG][emg]) artifacts.
     uncompress the contents into a directory called `aar1.3` within the EEGLAB's
     `plugin` directory.
 
+[git]: http://git-scm.com/
 [masterzip]: https://github.com/germangh/eeglab_plugin_aar/archive/master.zip
 [eeglab]: http://sccn.ucsd.edu/eeglab/
 
