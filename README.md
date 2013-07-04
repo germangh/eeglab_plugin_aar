@@ -53,8 +53,12 @@ artifacts, and one automatic method to correct muscle ([EMG][emg]) artifacts.
     git clone git://github.com/germangh/eeglab_plugin_aar aar1.3
     ````
     where `<EEGLAB_ROOT>` should be replaced by the path to EEGLAB's root
-    directory.
+    directory. If you don't want to use [GIT][git] to download clone the code
+    repository, you can just download the code as a [zip file][masterzip], and
+    uncompress the contents into a directory called `aar1.3` within the EEGLAB's
+    `plugin` directory.
 
+[masterzip]: https://github.com/germangh/eeglab_plugin_aar/archive/master.zip
 [eeglab]: http://sccn.ucsd.edu/eeglab/
 
 4. Optionally, you may want to install additional [BSS][bss] algorithms. Both
