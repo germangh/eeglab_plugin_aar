@@ -54,28 +54,21 @@ artifacts, and one automatic method to correct muscle (<a href="http://emedicine
 <a name="installation-instructions" class="anchor" href="#installation-instructions"><span class="octicon octicon-link"></span></a>Installation instructions</h2>
 
 <ol>
-<li><p>Install <a href="http://sccn.ucsd.edu/eeglab/">EEGLAB</a> for MATLAB, if you haven't done so already.</p></li>
+<li><p>Install <a href="http://sccn.ucsd.edu/eeglab/">EEGLAB</a> for MATLAB, if you haven't done so already. Ensure
+that EEGLAB is in your MATLAB's search path.</p></li>
 <li>
-<p>Find out EEGLAB's root directory. If you installed EEGLAB properly (which
-includes adding EEGLAB to your MATLAB search path), then you should be able
-to get EEGLAB's root dir using the following command in MATLAB:</p>
+<p>Copy and paste the following code in the MATLAB command window and press
+<code>Enter</code>:</p>
 
-<div class="highlight"><pre><span class="n">fileparts</span><span class="p">(</span><span class="n">which</span><span class="p">(</span><span class="s">'eeglab'</span><span class="p">))</span>
+<div class="highlight"><pre><span class="n">eeglabRoot</span> <span class="p">=</span> <span class="n">fileparts</span><span class="p">(</span><span class="n">which</span><span class="p">(</span><span class="s">'eeglab'</span><span class="p">));</span>
+<span class="n">url</span> <span class="p">=</span> <span class="s">'https://github.com/germangh/eeglab_plugin_aar/archive/master.zip'</span><span class="p">;</span>
+<span class="n">unzip</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="p">[</span><span class="n">eeglabRoot</span> <span class="n">filesep</span> <span class="s">'plugins'</span><span class="p">]);</span>
+<span class="n">eeglab</span> <span class="n">redraw</span><span class="p">;</span>
 </pre></div>
-</li>
-<li>
-<p>Open a terminal and type:</p>
-
-<div class="highlight"><pre><span class="nb">cd</span> &lt;EEGLAB_ROOT&gt;/plugins
-git clone git://github.com/germangh/eeglab_plugin_aar aar1.3
-</pre></div>
-
-<p>where <code>&lt;EEGLAB_ROOT&gt;</code> should be replaced by the path to EEGLAB's root
-directory.</p>
 </li>
 <li><p>Optionally, you may want to install additional <a href="http://en.wikipedia.org/wiki/Blind_signal_separation">BSS</a> algorithms. Both
-<a href="http://www.tsi.enst.fr/%7Ecardoso/Algo/Jade/jadeR.m">JADE</a> and <a href="http://www.cis.hut.fi/projects/ica/fastica/">FastICA</a> will be automatically detected as
-as they are in the MATLAB's search path:</p></li>
+<a href="http://www.tsi.enst.fr/%7Ecardoso/Algo/Jade/jadeR.m">JADE</a> and <a href="http://www.cis.hut.fi/projects/ica/fastica/">FastICA</a> will be automatically detected by the AAR
+plug-in as long as they are in the MATLAB's search path:</p></li>
 </ol><h2>
 <a name="additional-resources" class="anchor" href="#additional-resources"><span class="octicon octicon-link"></span></a>Additional resources</h2>
 
