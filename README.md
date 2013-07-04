@@ -36,35 +36,25 @@ artifacts, and one automatic method to correct muscle ([EMG][emg]) artifacts.
 
 ## Installation instructions
 
-1. Install [EEGLAB][eeglab] for MATLAB, if you haven't done so already.
+1. Install [EEGLAB][eeglab] for MATLAB, if you haven't done so already. Ensure
+   that EEGLAB is in your MATLAB's search path.
 
-2. Find out EEGLAB's root directory. If you installed EEGLAB properly (which
-   includes adding EEGLAB to your MATLAB search path), then you should be able
-   to get EEGLAB's root dir using the following command in MATLAB:
+2. Copy and paste the following code in the MATLAB command window and press
+   `Enter`:
 
     ````matlab
-    fileparts(which('eeglab'))
+    eeglabRoot = fileparts(which('eeglab'));
+    url = 'https://github.com/germangh/eeglab_plugin_aar/archive/master.zip';
+    unzip(url, [eeglabRoot filesep 'plugins'];
+    eeglab redraw;
     ````
+    [git]: http://git-scm.com/
+    [masterzip]: https://github.com/germangh/eeglab_plugin_aar/archive/master.zip
+    [eeglab]: http://sccn.ucsd.edu/eeglab/
 
-3. Open a terminal and type:
-
-    ````bash
-    cd <EEGLAB_ROOT>/plugins
-    git clone git://github.com/germangh/eeglab_plugin_aar aar1.3
-    ````
-    where `<EEGLAB_ROOT>` should be replaced by the path to EEGLAB's root
-    directory. If you don't want to use [GIT][git] to clone the code
-    repository, you can just download the code as a [zip file][masterzip], and
-    uncompress the contents into a directory called `aar1.3` within the EEGLAB's
-    `plugin` directory.
-
-[git]: http://git-scm.com/
-[masterzip]: https://github.com/germangh/eeglab_plugin_aar/archive/master.zip
-[eeglab]: http://sccn.ucsd.edu/eeglab/
-
-4. Optionally, you may want to install additional [BSS][bss] algorithms. Both
-   [JADE][jade] and [FastICA][fastica] will be automatically detected as
-   as they are in the MATLAB's search path:
+3. Optionally, you may want to install additional [BSS][bss] algorithms. Both
+   [JADE][jade] and [FastICA][fastica] will be automatically detected by the AAR
+   plug-in as long as they are in the MATLAB's search path:
 
 [jade]: http://www.tsi.enst.fr/~cardoso/Algo/Jade/jadeR.m
 [fastica]: http://www.cis.hut.fi/projects/ica/fastica/
