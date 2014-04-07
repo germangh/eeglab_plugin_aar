@@ -46,6 +46,7 @@ artifacts, and one automatic method to correct muscle ([EMG][emg]) artifacts.
     eeglabRoot = fileparts(which('eeglab'));
     url = 'https://github.com/germangh/eeglab_plugin_aar/archive/master.zip';
     unzip(url, [eeglabRoot filesep 'plugins']);
+    addpath(genpath(eeglabRoot));
     eeglab redraw;
     ````
 [git]: http://git-scm.com/
