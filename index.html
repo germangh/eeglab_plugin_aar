@@ -60,9 +60,10 @@ that EEGLAB is in your MATLAB's search path.</p></li>
 <p>Copy and paste the following code in the MATLAB command window and press
 <code>Enter</code>:</p>
 
-<div class="highlight"><pre><span class="n">eeglabRoot</span> <span class="p">=</span> <span class="n">fileparts</span><span class="p">(</span><span class="n">which</span><span class="p">(</span><span class="s">'eeglab'</span><span class="p">));</span>
+<div class="highlight highlight-matlab"><pre><span class="n">eeglabRoot</span> <span class="p">=</span> <span class="n">fileparts</span><span class="p">(</span><span class="n">which</span><span class="p">(</span><span class="s">'eeglab'</span><span class="p">));</span>
 <span class="n">url</span> <span class="p">=</span> <span class="s">'https://github.com/germangh/eeglab_plugin_aar/archive/master.zip'</span><span class="p">;</span>
 <span class="n">unzip</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="p">[</span><span class="n">eeglabRoot</span> <span class="n">filesep</span> <span class="s">'plugins'</span><span class="p">]);</span>
+<span class="n">addpath</span><span class="p">(</span><span class="n">genpath</span><span class="p">(</span><span class="n">eeglabRoot</span><span class="p">));</span>
 <span class="n">eeglab</span> <span class="n">redraw</span><span class="p">;</span>
 </pre></div>
 </li>
@@ -95,6 +96,33 @@ the performance of some of the methods included in the AAR toolbox.</p>
 <a href="https://groups.google.com/forum/#!forum/aartoolbox">this Google group</a>. Please join the group if you are using the AAR
 plug-in. Only I can post to the forum so you can be sure of receiving emails
 very rarely, if you ever receive any.</p>
+
+<h2>
+<a name="known-issues" class="anchor" href="#known-issues"><span class="octicon octicon-link"></span></a>Known issues</h2>
+
+<ul>
+<li><p>The algorithm for EMG correction which is based on the criterion
+<code>emg_psd</code> requires MATLAB's Signal Processing Toolbox v.6.2 or newer.
+We do not expect to solve this issue in the near future.</p></li>
+<li><p>There exist small differences between the correction results obtained
+under MATLAB v7.4 and Signal Processing Toolbox v6.6 and the results
+obtained under previous MATLAB releases. Nevertheless, the differences
+found so far are very small (negligible with respect to typical EEG
+noise levels). The probable cause are the changes that were introduced
+in MATLAB's SPT toolbox v6.6.</p></li>
+<li><p>There exist very small differences between the correction results
+obtain under MATLAB v7.4 for Windows and MATLAB v7.4 for Linux. Again,
+the differences are well below typical EEG noise levels. The causes of
+these differences are unknown and I have no plans of investigating this further.</p></li>
+</ul><h2>
+<a name="version-history" class="anchor" href="#version-history"><span class="octicon octicon-link"></span></a>Version history</h2>
+
+<p>See <a href="./version_history.md">version history</a>.</p>
+
+<h2>
+<a name="credit-to-third-parties" class="anchor" href="#credit-to-third-parties"><span class="octicon octicon-link"></span></a>Credit to third parties</h2>
+
+<p>See <a href="./credits.md">credits</a>.</p>
 
 <h2>
 <a name="license" class="anchor" href="#license"><span class="octicon octicon-link"></span></a>License</h2>
