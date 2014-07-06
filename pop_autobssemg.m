@@ -83,7 +83,7 @@ selectalg = {};
 
 for index = 1:length(allalgs)
     if exist([allalgs{index} '_ifc'],'file') && exist([allalgs{index}],'file'),
-        selectalg = {selectalg{:} allalgs{index}};
+        selectalg = [selectalg(:) allalgs(index)];
     end
 end
 if isempty(selectalg),
@@ -118,7 +118,7 @@ end
 selectcrit = {};
 for index = 1:length(allcrits)
     if exist([allcrits{index}],'file') && exist([allcrits{index}],'file'),
-        selectcrit = {selectcrit{:} allcrits{index}};
+        selectcrit = [selectcrit(:) allcrits(index)];
     end
 end
 if isempty(selectcrit),
@@ -257,7 +257,7 @@ EEG.data = reshape(EEG.data,[EEG.nbchan,EEG.pnts,EEG.trials]);
 bss_opt_str = [];
 for i = 1:2:length(bss_opt),
     if isnumeric(bss_opt{i+1}),
-        bss_opt_str = [bss_opt_str ',''' bss_opt{i} ''', [' num2str(bss_opt{i+1}) ']'];
+        bss_opt_str = [bss_opt_str ',''' bss_opt{i} ''', [' num2str(bss_opt{i+1}) ']']; %#ok<*AGROW>
     elseif ischar(bss_opt{i+1}),
         bss_opt_str = [bss_opt_str ',''' bss_opt{i} ''',''' bss_opt{i+1} ''''];
     else
@@ -274,6 +274,12 @@ for i = 1:2:length(crit_opt),
         crit_opt_str = [crit_opt_str ',''' crit_opt{i} ''', [' num2str(crit_opt{i+1}) ']'];
     elseif ischar(crit_opt{i+1}),
         crit_opt_str = [crit_opt_str ',''' crit_opt{i} ''',''' crit_opt{i+1} ''''];
+    elseif isa(crit_opt{i+1}, 'spectrum.welch'),
+        % A quick and dirty fix for the bug reported by Jerry Zhu (thanks!)
+        buildStr = sprintf('spectrum.welch({''%s''}, %d)', ...
+            crit_opt{i+1}.WindowName, ...
+            crit_opt{i+1}.SegmentLength);
+        crit_opt_str = [crit_opt_str ',''' crit_opt{i} ''',' buildStr];
     else
         crit_opt_str = [crit_opt_str ',''' crit_opt{i} ''',' class(crit_opt{i+1})];
     end
