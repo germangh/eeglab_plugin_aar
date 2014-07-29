@@ -83,7 +83,7 @@ selectalg = {};
 
 for index = 1:length(allalgs)
     if exist([allalgs{index} '_ifc'],'file') && exist([allalgs{index}],'file'),
-        selectalg = [selectalg(:) allalgs(index)];
+        selectalg = [selectalg(:);allalgs(index)];
     end
 end
 if isempty(selectalg),
