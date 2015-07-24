@@ -142,7 +142,10 @@ you must cite the following article:
 * [Gomez-Herrero, G.][ggh] et al., _Automatic Removal of Ocular Artifacts in the
   EEG without an EOG Reference Channel_, In Proceedings of the 7th Nordic Signal
   Processing Symposium, 2006. [10.1109/NORSIG.2006.275210][eog-doi]. The
-  article is freely available from [TUT's archives][aar-tut], and from
-  [my homepage][aar-home].
+  article is freely available from [Research Gate][rg-eogpaper], and from
+  [IEEE Explore](http://dx.doi.org/10.1109/NORSIG.2006.275210).
+
+  [rg-eogpaper]:
+  https://www.researchgate.net/publication/224683099_Automatic_Removal_of_Ocular_Artifacts_in_the_EEG_without_an_EOG_Reference_Channel
 
 
