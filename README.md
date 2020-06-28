@@ -1,14 +1,14 @@
+| :exclamation: | I am not developing nor maintaining this code anymore. Use at your own risk. |
+| --------------| ---------------------------------------------------------------------------- |
+
+
 AAR plug-in for EEGLAB
 =================
 
-This repository stores the code of the AAR plug-in for [EEGLAB][eeglab] that was
-released on 31-10-2008. I am not developing this code anymore but if you report
-any major bug I will try to fix it whenever I have time. For suggestions,
-comments and bug reports, please contact [German Gomez-Herrero][ggh].
-
-
 [ggh]: http://germangh.com
 
+This repository stores the code of the AAR plug-in for [EEGLAB][eeglab] that was
+released on 31-10-2008. 
 
 ## Overview
 
